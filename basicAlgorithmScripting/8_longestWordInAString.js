@@ -1,5 +1,3 @@
-8_longestWordInAString.js
-
 // Return the length of the longest word in the provided sentence.
 
 function findLongestWord(str) {
