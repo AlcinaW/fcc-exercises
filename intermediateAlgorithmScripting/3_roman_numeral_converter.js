@@ -1,30 +1,30 @@
 // Convert the given number into a roman numeral.
 //All roman numerals answers should be provided in upper-case.
-var numerals = [
-  {value:1000, numeral: "M"},
-  {value:900, numeral: "CM"},
-  {value:500, numeral: "D"},
-  {value:400, numeral: "CD"},
-  {value:100, numeral: "C"},
-  {value:90, numeral: "XC"},
-  {value:50, numeral: "L"},
-  {value:40, numeral: "XL"},
-  {value:10, numeral: "X"},
-  {value:9, numeral: "IX"},
-  {value:5, numeral: "V"},
-  {value:4, numeral: "IV"},
-  {value:1, numeral: "I"},
-];
-
 
 function convertToRoman(num) {
+  //works on numbers under 4000 only
+  //array with roman numerals
+  var romanNum = ["M","CM","D","CD","C","XC","L","X","XL","IX","V","IV","I"];
+  //matching array with arabic numbers
+  var arabicNum = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
   //result will be string
   var result = "";
-  //use modulus operator? (but want number, not the leftover)
-  //check length of input number
-  //if 3 -> figure out value of 1000 place, push to array, keep looping to check
-  //what to do about subtraction numbers? (4 is 5-1, 9 is 10-1; 40,50,90,400,900)
- return num;
+
+  //loop through length of array, same for both
+  //maybe use indexOf?
+   for(i = 0; i < romanNum.length; i++){
+     //while input value is greater or equal to the current arabic num in array
+     //example: 36; will start checking from 10 b/c smaller than 40
+     while (num >= arabicNum[i]) {
+       //input value - current arabic num in array
+       num -= arabicNum[i];
+       //result is the string of matching roman numeral in same spot of array
+       //X+X+X, then is smaller than 10
+       result += romanNum[i];
+     }
+   }
+  return result;
+  //return num;
 }
 
 convertToRoman(36);
