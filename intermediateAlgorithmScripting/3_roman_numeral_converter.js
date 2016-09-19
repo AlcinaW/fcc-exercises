@@ -4,7 +4,7 @@
 function convertToRoman(num) {
   //works on numbers under 4000 only
   //array with roman numerals
-  var romanNum = ["M","CM","D","CD","C","XC","L","X","XL","IX","V","IV","I"];
+  var romanNum = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
   //matching array with arabic numbers
   var arabicNum = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
   //result will be string
