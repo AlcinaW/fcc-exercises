@@ -5,8 +5,9 @@
 function whatIsInAName(collection, source) {
   // What's in a name?
   var arr = [];
-
-
+  //define the key
+  //loop through array - filter? or for loop with length of array of object
+  //
   return arr;
 }
 
