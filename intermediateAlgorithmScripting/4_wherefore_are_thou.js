@@ -4,11 +4,16 @@
 
 function whatIsInAName(collection, source) {
   // What's in a name?
-  var arr = [];
-  //define the key
-  //loop through array - filter? or for loop with length of array of object
-  //
-  return arr;
+  //define keys to match to
+  var sourceKeys = Object.keys(source);
+
+  return collection.filter(function(obj) {
+    //tell filter what to filter out, T or F
+      return sourceKeys.every( function(key) {
+        return obj.hasOwnProperty(key) && obj[key] === source[key];
+      });
+  });
+  //output object that matches
 }
 
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
