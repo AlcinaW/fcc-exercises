@@ -1,16 +1,28 @@
 //Translate the provided string to pig latin.
 
 function translatePigLatin(str) {
-  //if str[0] === vowel, return string + "ay"
-  //else take first letter, hold variable
-  //slice str(1) + variable + "ay"
-  //what if consonant cluster? keep checking until match vowel, then stop
-
-  //split word into array
-  var letters = str.split('');
-
-  if (str[0] === "a" || "")
-  return str;
+  //split original word into array
+  //create array of vowels to check against
+  var letters = str.split(''),
+      vowels = ['a','e','i','o','u'];
+      //check if the first character of letters is vowel
+      if (vowels.includes(str.charAt(0))) {
+        //join the letter array (or str) with "way" on end
+        return letters.join('') + 'way';
+      }
+      //check consonant cluster with while loop for not vowels
+      while(true) {
+        //check if vowel, if not, push to end, splice first letter
+        if(!vowels.includes(letters[0])) {
+          letters.push(letters.splice(0,1));
+        } else {
+          //stops when encounter vowel
+          break;
+        }
+      }
+      //joins updated array with "ay"
+      str = letters.join('') + 'ay';
+      return str;
 }
 
 translatePigLatin("consonant");
