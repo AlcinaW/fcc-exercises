@@ -7,12 +7,15 @@ function pairElement(str) {
   //switch statement, but will have to write for all scenarios
   //push all new arrays to array for 2d array
   //for each in the array check
-  var at = ['A','T'],
-      gc = ['G','C'],
-      letterArr = str.split('');
+  var letterArr = str.split(''),
+      pairingArr = [];
+
+      // letterArr.map(function(letter)) {
+      //   pairingArr.push(letter.toUpperCase());
+      // });
 
   // should return [["G", "C"], ["C","G"],["G", "C"]]
-  return str;
+  return pairingArr;
 }
 
 pairElement("GCG");
