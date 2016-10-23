@@ -1,18 +1,22 @@
 // Find the missing letter in the passed letter range and return it.
 // If all letters are present in the range, return undefined.
 
-//String.prototype.charCodeAt()
-//String.fromCharCode()
-
-//Use 2 arrays?
-//String.fromCharCode(65, 66, 67); is "ABC"; in this case, count up from 65?
-//if the string always starts from a smaller number -> take smallest/first letter and the largest/last letter
-//check length of string is same as difference(?), return undefined
-//if there is a difference, match the numbers to the letter, the number that is missing, return the letter
-
-
 function fearNotLetter(str) {
-  return str;
+  //variables to store character codes, missing letter, and array that the letters are split into
+  var compare = str.charCodeAt(0),
+      missing,
+      letterNum = str.split('');
+      //map through array of character codes, matches, count up
+  letterNum.map(function(letter, i) {
+    if (str.charCodeAt(i) == compare) {
+      ++compare;
+    } else {
+      //if doesn't match, store in missing variable
+      missing = String.fromCharCode(compare);
+    }
+  });
+  //return missing, or if no missing characters, return undefined
+  return missing;
 }
 
 fearNotLetter("abce");
