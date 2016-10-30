@@ -12,12 +12,13 @@ function uniteUnique(arr) {
   //maybe make the place in array a named var, length
   for (var i = 0; i < arguments.length; i++) {
      for (var j = 0; j < arguments[i].length; j++) {
-       if () {
+       if (uniqueArr.indexOf(arguments[i][j]) < 0) {
          //check
+         uniqueArr.push(arguments[i][j]);
        }
      }
    }
-  return arr;
+  return uniqueArr;
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
