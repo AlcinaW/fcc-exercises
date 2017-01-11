@@ -4,11 +4,23 @@
 
 //For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than 10 are 1, 1, 3, and 5.
 
+// use modulus to determine if number is even or odd
+// somehow need to add everything together after checking
+// two variables?
+
 function sumFibs(num) {
-  // use modulus to determine if number is even or odd
-  // somehow need to add everything together after checking
-  // two variables?
-  return num;
+  var previousNum = 0;
+  var currentNum = 1;
+  var result =  0;
+
+  while (currentNum <= num) {
+    if (currentNum % 2 !== 0) {
+      result += currentNum;
+    }
+    currentNum += previousNum;
+    previousNum = currentNum - previousNum;
+  }
+  return result;
 }
 
 sumFibs(4);
