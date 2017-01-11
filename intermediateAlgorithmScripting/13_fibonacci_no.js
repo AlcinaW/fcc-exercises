@@ -7,6 +7,7 @@
 // use modulus to determine if number is even or odd
 // somehow need to add everything together after checking
 // two variables?
+//can also use array methods -> grab last number in created arrays and check if odd, and then push to final array to sum it up
 
 function sumFibs(num) {
   var previousNum = 0;
