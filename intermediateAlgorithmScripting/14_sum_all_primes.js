@@ -7,6 +7,9 @@
 //what if create array of already existing time and compare?
 //or check each by dividing by numbers in from of it -> if divisible, move to next number because not prime
 
+//SIEVE -> divide by certain key numbers -> divide by 2? remove all possibilities
+//https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+
 function sumPrimes(num) {
   return num;
 }
