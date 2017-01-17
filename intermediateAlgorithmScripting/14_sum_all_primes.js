@@ -10,27 +10,32 @@
 //SIEVE -> divide by certain key numbers -> divide by 2? remove all possibilities
 //https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
-//start from 2 because all numbers can divide by 1
+//start from 2 because 1 is not a prime number
+//is there a better way to name the x/y?
 
 function sumPrimes(num) {
-  var primeArr=[];
+  var primeArr=[]; //empty array to store numbers
 
   for (var i = 2; i <= num; i++){
+    //if i is prime, push to primeArr
     if(isPrimeNum(i)) {
+      //for each loop of this function, call isPrimeNum function
+      //if isPrimeNum is returning true below, will push to primeArr
       primeArr.push(i);
     }
   }
-  return primeArr.reduce(function(a,b) {
-    return a + b;
+  return primeArr.reduce(function(x,y) {
+    return x + y;
   });
 
   function isPrimeNum(num) {
     for (var x = 2; x < num; x++) {
+      //use modulus is 0, is false (not prime)
       if (num % x === 0) {
-        return false;
+        return false; //break loop if 0
       }
     }
-    return true;
+    return true; //is prime
   }
 }
 
