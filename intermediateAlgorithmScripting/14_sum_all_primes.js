@@ -11,6 +11,17 @@
 //https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
 function sumPrimes(num) {
+  var primeArr=[]; //array where primes will be pushed after checked
+  for (var i=2; i <= num; i++){
+    for (var j=2; j <=i; j++) {
+      if (i===j) {
+        primeArr.push(i);
+      }
+      if (i % j === 0) {
+        break;
+      }
+    }
+  }
   return num;
 }
 
