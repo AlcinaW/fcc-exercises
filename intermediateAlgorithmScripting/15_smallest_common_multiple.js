@@ -9,17 +9,23 @@
 
 function smallestCommons(arr) {
   //find min and max numbers, push to array in order of smaller to larger number
+  var range = [];
+
   var min = Math.min(arr[0], arr[1]);
   console.log(min);
   var max = Math.max(arr[0], arr[1]);
   console.log(max);
 
-  var range = [];
-
   for (var x = min; x <= max; x++) {
+    //get range of numbers between min and max, push to array
     range.push(x);
   }
+  //take lowest common multiple, first number
+  var lcm = range[0];
 
+  for (i = 1; i < range.length; i++) {
+
+  }
 
   return arr;
 }
