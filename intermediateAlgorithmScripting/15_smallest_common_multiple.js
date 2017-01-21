@@ -20,15 +20,21 @@ function smallestCommons(arr) {
     //get range of numbers between min and max, push to array
     range.push(x);
   }
-  //take lowest common multiple, first number
+
   var lcm = range[0];
 
   for (i = 1; i < range.length; i++) {
-
+    var GCD = gcd(lcm, range[i]);
+    lcm = (lcm * range[i]) / GCD;
   }
-
-  return arr;
+  return lcm;
+  //Euclidean algorithm
+  function gcd(x, y) {
+    if (y === 0)
+      return x;
+    else
+      return gcd(y, x % y);
+    }
 }
-
 
 smallestCommons([1,5]);
