@@ -10,8 +10,11 @@
 function dropElements(arr, func) {
   // Drop them elements.
 
-  var times = arr.length;
-  for (var i = 0; i < times; i++) { }
+  //while loop checks and returns false on the 0 index
+  while(!func(arr[0])){
+    //shift over
+    arr.shift();
+  }
   return arr;
 }
 
