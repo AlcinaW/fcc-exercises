@@ -4,7 +4,9 @@
 
 function steamrollArray(arr) {
   // I'm a steamroller, baby
-  return arr;
+
+  return Array.isArray(1);
+
 }
 
 steamrollArray([1, [2], [3, [[4]]]]);
