@@ -5,6 +5,7 @@
 
 
 function binaryAgent(str) {
+  //binary can be read in JS?
   return str;
 }
 
