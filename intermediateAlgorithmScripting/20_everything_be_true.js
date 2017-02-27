@@ -4,8 +4,10 @@
 function truthCheck(collection, pre) {
   // Is everyone being true?
   //If pre exists in all == true, if not, false
-  //switch?
-  //check length? but WHAT IF THE PROPERTY EXISTS BUT THE VALUE IS EMPTY!?!!?!?! or undefined
+  //switch statement? length check?
+  //check length? but what if the property exists by the value is empty or undefined
+  //set value to true unless something changes it
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
   //collection.hasOwnProperty();
 //   for(var key in collection) {
 //     if(collection.hasOwnProperty(key)) {
