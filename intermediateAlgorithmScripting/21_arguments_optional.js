@@ -6,7 +6,31 @@
 // If either argument isn't a valid number, return undefined.
 
 function addTogether() {
-  return false;
+
+  //check type of variable, if number, return the number, if not, return undefined
+  function checkIfNumber(num) {
+    return typeof num === 'number' ? num : undefined;
+  }
+
+  var a = checkIfNumber(arguments[0]);
+  var b = checkIfNumber(arguments[1]);
+
+  if (arguments.length > 1) {
+    return a && b ? a + b : undefined;
+  } else {
+    if (a) {
+      return function(y) {
+        if (checkIfNumber(y)) {
+          return a + y;
+        } else {
+          return undefined;
+        }
+      };
+    } else {
+      return undefined;
+    }
+  }
 }
 
-addTogether(2,3);
+
+console.log(addTogether(2,3));
