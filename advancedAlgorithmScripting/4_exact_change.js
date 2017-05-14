@@ -3,7 +3,7 @@
 // Return the string "Insufficient Funds" if cash-in-drawer is less than the change due. Return the string "Closed" if cash-in-drawer is equal to the change due.
 // Otherwise, return change in coin and bills, sorted in highest to lowest order.
 
-//array of demonimations
+//array of denominations
 var denom = [
   { name: 'ONE HUNDRED', value: 100.00},
   { name: 'TWENTY', value: 20.00},
@@ -15,7 +15,7 @@ var denom = [
   { name: 'NICKEL', value: 0.05},
   { name: 'PENNY', value: 0.01}
 ];
-
+//cid cash in drawer
 function checkCashRegister(price, cash, cid) {
   var change = cash - price;
 
@@ -46,6 +46,7 @@ function checkCashRegister(price, cash, cid) {
       return acc;
     }
   }, []);
+  //extra check in case the drawer has the amount needed, but not the denom to give back the change
   return result.length > 0 && change === 0 ? result : 'Insufficient Funds';
 }
 
