@@ -3,6 +3,8 @@
 
 function updateInventory(arr1, arr2) {
     // All inventory must be accounted for or you're fired!
+    //concat the arrays?
+    var inventory = arr1.concat(arr2);
     return arr1;
 }
 
