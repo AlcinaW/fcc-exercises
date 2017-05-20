@@ -4,7 +4,14 @@
 function updateInventory(arr1, arr2) {
     // All inventory must be accounted for or you're fired!
     //concat the arrays?
-    var inventory = arr1.concat(arr2);
+    var inventory = arr1.concat(arr2).reduce(function(acc, next){
+      if(acc[next[1]]) {
+        acc[next[1]] += next[0];
+      } else {
+
+      }
+      return acc;
+    }, {});
     return arr1;
 }
 
