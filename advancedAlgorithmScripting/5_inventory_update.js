@@ -8,11 +8,11 @@ function updateInventory(arr1, arr2) {
       if(acc[next[1]]) {
         acc[next[1]] += next[0];
       } else {
-
+          acc[next[1]] =  next[0];
       }
       return acc;
     }, {});
-    return arr1;
+    return inventory;
 }
 
 // Example inventory lists
